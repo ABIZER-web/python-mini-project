@@ -16,7 +16,7 @@ def reset_password():
 
 # Create the main window
 root = tk.Tk()
-root.title("Login to Millionaire Track")
+root.title("Login to AA")
 
 # Create and place the email label and entry
 email_label = tk.Label(root, text="Email*")
