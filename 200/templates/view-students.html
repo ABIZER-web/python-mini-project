@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>View Students</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+  <div class="container mx-auto p-6">
+    <h1 class="text-2xl font-bold text-[#800000] mb-4">View Students</h1>
+
+    <table class="min-w-full bg-white shadow-md rounded">
+      <thead>
+        <tr class="bg-[#800000] text-white">
+          <th class="py-2 px-4 text-left">Roll No</th>
+          <th class="py-2 px-4 text-left">Student Name</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="border-b">
+          <td class="py-2 px-4">01</td>
+          <td class="py-2 px-4">Harsimran</td>
+        </tr>
+        <tr class="border-b">
+          <td class="py-2 px-4">02</td>
+          <td class="py-2 px-4">Shreyas</td>
+        </tr>
+        <tr class="border-b">
+          <td class="py-2 px-4">03</td>
+          <td class="py-2 px-4">Hussain</td>
+        </tr>
+        <tr class="border-b">
+          <td class="py-2 px-4">04</td>
+          <td class="py-2 px-4">Aniket</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <button onclick="goBack()" class="mt-6 bg-[#800000] text-white px-4 py-2 rounded hover:bg-[#600000]">Back</button>
+  </div>
+
+  <script>
+    function goBack() {
+      window.location.href = 'teacher-dashboard.html';
+    }
+  </script>
+</body>
+</html>

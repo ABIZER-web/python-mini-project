@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Manage Attendance</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+  <div class="container mx-auto p-6">
+    <h1 class="text-2xl font-bold text-[#800000] mb-4">Manage Attendance</h1>
+
+    <table class="min-w-full bg-white shadow-md rounded">
+      <thead>
+        <tr class="bg-[#800000] text-white">
+          <th class="py-2 px-4 text-left">Roll No</th>
+          <th class="py-2 px-4 text-left">Student Name</th>
+          <th class="py-2 px-4 text-center">Attendance</th>
+        </tr>
+      </thead>
+      <tbody id="attendanceTable">
+        <!-- Sample Student Rows -->
+        <tr class="border-b">
+          <td class="py-2 px-4">01</td>
+          <td class="py-2 px-4">harsimran</td>
+          <td class="py-2 px-4 text-center">
+            <button onclick="markAttendance(this, 'Present')" class="bg-green-500 text-white px-3 py-1 rounded hover:bg-green-600">Present</button>
+            <button onclick="markAttendance(this, 'Absent')" class="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600">Absent</button>
+          </td>
+        </tr>
+        <tr class="border-b">
+          <td class="py-2 px-4">02</td>
+          <td class="py-2 px-4">shreyas</td>
+          <td class="py-2 px-4 text-center">
+            <button onclick="markAttendance(this, 'Present')" class="bg-green-500 text-white px-3 py-1 rounded hover:bg-green-600">Present</button>
+            <button onclick="markAttendance(this, 'Absent')" class="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600">Absent</button>
+          </td>
+        </tr>
+        <tr class="border-b">
+            <td class="py-2 px-4">03</td>
+            <td class="py-2 px-4">hussain</td>
+            <td class="py-2 px-4 text-center">
+              <button onclick="markAttendance(this, 'Present')" class="bg-green-500 text-white px-3 py-1 rounded hover:bg-green-600">Present</button>
+              <button onclick="markAttendance(this, 'Absent')" class="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600">Absent</button>
+            </td>
+          </tr>
+          <tr class="border-b">
+            <td class="py-2 px-4">04</td>
+            <td class="py-2 px-4">aniket</td>
+            <td class="py-2 px-4 text-center">
+              <button onclick="markAttendance(this, 'Present')" class="bg-green-500 text-white px-3 py-1 rounded hover:bg-green-600">Present</button>
+              <button onclick="markAttendance(this, 'Absent')" class="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600">Absent</button>
+            </td>
+          </tr>
+        <!-- Add more students as needed -->
+      </tbody>
+    </table>
+
+    <button onclick="goBack()" class="mt-6 bg-[#800000] text-white px-4 py-2 rounded hover:bg-[#600000]">Back</button>
+  </div>
+
+  <script>
+    function markAttendance(button, status) {
+      const row = button.closest("tr");
+      row.style.backgroundColor = status === 'Present' ? '#d1fae5' : '#fee2e2';
+    }
+
+    function goBack() {
+      window.location.href = 'teacher-dashboard.html';
+    }
+  </script>
+</body>
+</html>
